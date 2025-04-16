@@ -22,7 +22,8 @@ if printrules == 'y':
 
         You have 10 guesses to guess a random number between 1 & {highnum} you choose,
         you want to guess the number correctly in as few guesses as possible.
-        You can type 99 to get a hint, the more guesses you've done the more accurate the hint will be.
+        You can type 99 to get a hint, the limit of hints is three.
+        The more guesses you've done the more accurate the hint will be.
         ''')
 
 guessnum = input(f'Please guess a number between 1 and {highnum}.')
