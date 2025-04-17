@@ -5,13 +5,17 @@ difficulty = input(
     """Please select your difficulty,
             1) Easy 1-10
             2) Medium 1-20
-            3) Hard 1-30"""
+            3) Hard 1-30
+            """
 )
 
 highnum = int(difficulty) * 10
 
 while True:
-    printrules = input("Do you want to read the rules? (y/n)")
+    printrules = input(
+        """Do you want to read the rules? (y/n)
+"""
+    )
     if printrules in ["y", "n"]:
         print("Great!")
         break
@@ -30,7 +34,10 @@ if printrules == "y":
         """
     )
 
-guessnum = input(f"Please guess a number between 1 and {highnum}.")
+guessnum = input(
+    f"""Please guess a number between 1 and {highnum}.
+                 """
+)
 
 hiddennum = random.randint(1, highnum)
 
@@ -61,7 +68,8 @@ while True:
                     print(f"The number is bigger than {highnum / 4}")
 
                     guessnum = input(
-                        f"Please guess another number between 1 and {highnum}."
+                        f"""Please guess another number between 1 and {highnum}.
+                        """
                     )
 
                 if int(hiddennum) < (highnum / 4) + (2 * (highnum / 4)):
@@ -70,7 +78,10 @@ while True:
                         f"The number is smaller than {(highnum / 4) + (2 * (highnum / 4))}"
                     )
 
-                    guessnum = input(f"Please guess a number between 1 and {highnum}.")
+                    guessnum = input(
+                        f"""Please guess a number between 1 and {highnum}.
+                                     """
+                    )
 
         if int(guessnum) == 99:
 
@@ -83,7 +94,8 @@ while True:
                         print(f"The number is bigger than {highnum / 2}")
 
                         guessnum = input(
-                            f"Please guess a number between 1 and {highnum}."
+                            f"""Please guess a number between 1 and {highnum}.
+                            """
                         )
 
                     if int(hiddennum) < (highnum / 2):
@@ -91,7 +103,8 @@ while True:
                         print(f"The number is smaller than {highnum / 2}")
 
                         guessnum = input(
-                            f"Please guess a number between 1 and {highnum}."
+                            f"""Please guess a number between 1 and {highnum}.
+                            """
                         )
 
                 if guesses > 2:
@@ -101,7 +114,8 @@ while True:
                         print(f"The number is smaller than {highnum / 4}")
 
                         guessnum = input(
-                            f"Please guess a number between 1 and {highnum}."
+                            f"""Please guess a number between 1 and {highnum}.
+                            """
                         )
 
                     else:
@@ -109,7 +123,8 @@ while True:
                         print(f"The number is bigger than {(highnum / 4) * 3}")
 
                         guessnum = input(
-                            f"Please guess a number between 1 and {highnum}."
+                            f"""Please guess a number between 1 and {highnum}.
+                            """
                         )
 
         else:
