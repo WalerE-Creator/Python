@@ -42,6 +42,15 @@ def add_upgrade3(amount):
     else:
         print("Not enough score")
 
+def add_upgrade4(amount):
+    global playerscore
+    if playerscore > 1499:
+        global upgrade
+        upgrade += amount
+        playerscore -= 1500
+    else:
+        print("Not enough score")
+
 def add_score(score):
     global playerscore
     playerscore += score
@@ -60,14 +69,17 @@ tk = Tk()
 btn = Button(tk, text="click me", command=lambda: add_score(upgrade))
 btn.pack()
 
-btn2 = Button(tk, text="Buy upgrade 1 costs 50, gives plus 1 score per click", command=lambda: add_upgrade(1))
+btn2 = Button(tk, text="Buy upgrade 1 costs 50, gives plus 2 score per click", command=lambda: add_upgrade(1))
 btn2.pack()
 
-btn3 = Button(tk, text="Buy upgrade 2 costs 150, gives plus 5 score per click", command=lambda: add_upgrade2(5))
+btn3 = Button(tk, text="Buy upgrade 2 costs 150, gives plus 10 score per click", command=lambda: add_upgrade2(5))
 btn3.pack()
 
 btn4 = Button(tk, text="Buy upgrade 3 costs 500, gives plus 20 score per click", command=lambda: add_upgrade3(20))
 btn4.pack()
+
+btn5 = Button(tk, text="Buy upgrade 4 costs 1500, gives plus 50 score per click", command=lambda: add_upgrade4(50))
+btn5.pack()
 
 tk.mainloop()
 
