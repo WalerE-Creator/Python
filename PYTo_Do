@@ -1,0 +1,28 @@
+from tkinter import *
+
+tk = Tk()
+
+to_do = ["1. "]
+next_number = 2
+print_str = "\n".join(to_do)
+
+
+def add_item():
+    global print_str
+    global next_number
+    global to_do
+    if next_number == 2:
+        item = input("What item do you want to add to your to-do list?\n")
+        to_do.append(item)
+        print_str = "".join(to_do)
+    else:
+        item = input("What item do you want to add to your to-do list?\n")
+        to_do.append(item)
+        print_str = " ".join(to_do)
+    print(print_str)
+    to_do.append("\n" + str(next_number) + ".")
+    next_number += 1
+
+
+add_item_btn = Button(tk, text=("add item"), command=lambda: add_item())
+add_item_btn.pack()
